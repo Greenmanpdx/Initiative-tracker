@@ -3,7 +3,7 @@
  */
 class Node
 {
-    protected Character character;
+    //protected Character character;
     protected Node link;
     protected int order;
 
@@ -14,9 +14,9 @@ class Node
         order = 0;
     }
     /*  Constructor  */
-    public Node(int val,Character incoming, Node n)
+    public Node(int val, Node n)
     {
-        character = incoming;
+        //character = incoming;
         order = val;
         link = n;
     }

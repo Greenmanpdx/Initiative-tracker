@@ -3,27 +3,30 @@
  */
 public class Dice {
 
-    Dice(int numb, int die) {
-        this.numbDice = numb;
-        this.dieType = die;
 
-    }
     private int dieType;
     private int numbDice;
-    private String whichDice = setWhichDice(this.numbDice, this.dieType);
+    private int bonus;
+    private String whichDice = setWhichDice(this.numbDice, this.dieType, this.bonus);
 
+    Dice(int numb, int die, int bonus) {
+        this.numbDice = numb;
+        this.dieType = die;
+        this.bonus =  bonus;
 
+    }
     public String getDice(){return whichDice;}
 
-    public String setWhichDice(int numb, int die){
+    public String setWhichDice(int numb, int die, int bonus){
 
-       return( Integer.toString(numbDice) + 'd' + Integer.toString(dieType));
+       return( Integer.toString(numbDice) + 'd' + Integer.toString(dieType) + " + " + Integer.toString(bonus));
 
      }
 
-    public void setDice(int numb, int die){
+    public void setDice(int numb, int die, int bonus){
         this.numbDice = numb;
         this.dieType = die;
+        this.bonus =  bonus;
 
     }
 }

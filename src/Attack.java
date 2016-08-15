@@ -9,7 +9,7 @@ public class Attack {
     public String getType(){return this.type;}
 
     public void setType(String type){this.type = type;}
-    public void setDice(int num, int dice){this.dice.setDice(num, dice);}
+    public void setDice(int num, int dice, int bonus){this.dice.setDice(num, dice, bonus);}
 
 
 

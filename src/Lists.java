@@ -11,5 +11,9 @@ public class Lists {
 
     }
 
+    public void addToList(Node current){
+        initOrder.add(current);
+    }
+
 
 }

@@ -1,7 +1,7 @@
 /**
  * Created by GreenMan on 3/22/2016.
  */
-public class Character implements Comparable<Character>{
+public class Character extends Node implements Comparable<Character>{
 
 
     private String name;
