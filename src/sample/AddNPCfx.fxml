@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="541.0" prefWidth="453.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.AddNPC">
+   <children>
+      <TextField fx:id="name" layoutX="70.0" layoutY="74.0" prefHeight="25.0" prefWidth="127.0" promptText="Name" />
+      <TextField fx:id="hp" layoutX="71.0" layoutY="114.0" prefHeight="25.0" prefWidth="38.0" promptText="HP" />
+      <TextField fx:id="ac" layoutX="125.0" layoutY="114.0" prefHeight="25.0" prefWidth="38.0" promptText="AC" />
+      <TextField fx:id="init" layoutX="179.0" layoutY="114.0" prefHeight="25.0" prefWidth="68.0" promptText="Initiative" />
+      <TextField fx:id="initBonus" layoutX="261.0" layoutY="114.0" prefHeight="25.0" prefWidth="98.0" promptText="Initiative Bonus" />
+      <TextField fx:id="fort" layoutX="71.0" layoutY="153.0" prefHeight="25.0" prefWidth="38.0" promptText="Fort" />
+      <TextField fx:id="will" layoutX="125.0" layoutY="153.0" prefHeight="25.0" prefWidth="38.0" promptText="Will" />
+      <TextField fx:id="ref" layoutX="181.0" layoutY="153.0" prefHeight="25.0" prefWidth="57.0" promptText="Reflex" />
+      <Button fx:id="save" layoutX="202.0" layoutY="502.0" mnemonicParsing="false" onAction="#handleButtonAction" text="Save" />
+      <Button fx:id="addAttack" layoutX="185.0" layoutY="293.0" mnemonicParsing="false" onAction="#handleButtonAction" text="Add Attack" />
+      <Label layoutX="159.0" layoutY="23.0" prefHeight="35.0" prefWidth="127.0" text="NPC Editor">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+
+      <Label layoutX="222.0" layoutY="228.0" text="+" />
+      <TextField fx:id="weapon" layoutX="65.0" layoutY="224.0" promptText="Weapon Name" />
+       <TextField fx:id="attackBonus" layoutX="232.0" layoutY="224.0" prefHeight="25.0" prefWidth="47.0" promptText="Bonus" />
+      <TextField fx:id="damage" layoutX="292.0" layoutY="224.0" prefHeight="25.0" prefWidth="83.0" promptText="damage" />
+      <RadioButton fx:id="melee" contentDisplay="TOP" layoutX="69.0" layoutY="253.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="75.0" selected="true" text="Melee" textAlignment="CENTER" userData="melee">
+         <toggleGroup>
+            <ToggleGroup fx:id="range" />
+         </toggleGroup></RadioButton>
+
+      <RadioButton fx:id="touch" layoutX="144.0" layoutY="262.0" mnemonicParsing="false" text="Touch" toggleGroup="$range" userData="touch" />
+      <RadioButton fx:id="ranged" layoutX="214.0" layoutY="262.0" mnemonicParsing="false" text="Range" toggleGroup="$range" userData="ranged" />
+      <RadioButton fx:id="rangedTouch" layoutX="279.0" layoutY="262.0" mnemonicParsing="false" text="Ranged Touch" toggleGroup="$range" userData="rangedTouch" />
+      <Line endX="100.0" layoutX="222.0" layoutY="204.0" startX="-100.0" />
+      <TableView fx:id="attackTableView" layoutX="18.0" layoutY="332.0" prefHeight="154.0" prefWidth="418.0">
+        <columns>
+          <TableColumn fx:id="weaponColumn" prefWidth="107.0" text="Weapon">
+            <cellValueFactory>
+               <PropertyValueFactory property="weapon" /></cellValueFactory>
+          </TableColumn>
+          <TableColumn fx:id="attackColumn" prefWidth="69.0" text="Atk Bonus">
+            <cellValueFactory>
+              <PropertyValueFactory property="attackBonus" /></cellValueFactory>
+            </TableColumn>
+           <TableColumn fx:id="rangeColumn" prefWidth="59.0" text="Range">
+            <cellValueFactory>
+              <PropertyValueFactory property="range" /></cellValueFactory>
+            </TableColumn>
+           <TableColumn fx:id="damageColumn" prefWidth="181.0" text="Damage">
+            <cellValueFactory>
+              <PropertyValueFactory property="damage" /></cellValueFactory>
+            </TableColumn>
+        </columns>
+         
+      </TableView>
+   </children>
+</AnchorPane>

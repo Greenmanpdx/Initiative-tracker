@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.*?>
+<AnchorPane fx:id="grid" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="270.0" prefWidth="414.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.AddPlayerWindow">
+   <children>
+      <Label fx:id="title" layoutX="88.0" layoutY="32.0" text="Add Character">
+         <font>
+            <Font size="36.0" />
+         </font>
+      </Label>
+      <Label layoutX="32.0" layoutY="79.0" prefHeight="35.0" prefWidth="72.0" text="Name">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="211.0" layoutY="78.0" text="AC">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="87.0" layoutY="148.0" text="Initiative ">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <TextField fx:id="name" layoutX="32.0" layoutY="114.0" prefHeight="25.0" prefWidth="138.0" />
+      <TextField fx:id="ac" layoutX="205.0" layoutY="114.0" prefHeight="25.0" prefWidth="42.0" />
+      <TextField fx:id="initiative" layoutX="108.0" layoutY="186.0" prefHeight="25.0" prefWidth="42.0" />
+      <Button fx:id="save" layoutX="168.0" layoutY="217.0" mnemonicParsing="false" onAction="#handleButtonAction" text="Save" />
+      <Label layoutX="223.0" layoutY="148.0" text="Bonus">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="304.0" layoutY="78.0" text="HP">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <TextField fx:id="hp" layoutX="293.0" layoutY="114.0" prefHeight="25.0" prefWidth="54.0" />
+      <TextField fx:id="initiativeBonus" layoutX="238.0" layoutY="186.0" prefHeight="25.0" prefWidth="41.0" />
+   </children>
+</AnchorPane>
